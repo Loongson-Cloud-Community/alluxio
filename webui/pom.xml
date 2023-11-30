@@ -42,8 +42,8 @@
             </goals>
             <phase>process-sources</phase>
             <configuration>
-              <nodeVersion>v10.11.0</nodeVersion>
-              <npmVersion>6.4.1</npmVersion>
+              <nodeVersion>v14.16.1</nodeVersion>
+              <npmVersion>6.14.12</npmVersion>
             </configuration>
           </execution>
           <execution>
@@ -53,7 +53,7 @@
             </goals>
             <phase>process-sources</phase>
             <configuration>
-              <arguments>install --production --no-save --no-package-lock --no-shrinkwrap</arguments>
+              <arguments>--registry https://registry.loongnix.cn:4873 install --production --no-save --no-package-lock --no-shrinkwrap --verbose</arguments>
             </configuration>
           </execution>
         </executions>

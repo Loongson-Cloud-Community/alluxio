@@ -67,7 +67,7 @@
     <profile>
       <id>fuseNative</id>
       <activation>
-        <activeByDefault>false</activeByDefault>
+        <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
         <runningWithNative>true</runningWithNative>

@@ -118,9 +118,11 @@
         <artifactId>protobuf-maven-plugin</artifactId>
         <version>0.6.1</version>
         <configuration>
-          <protocArtifact>com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}</protocArtifact>
+          <!-- protocArtifact>com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}</protocArtifact -->
           <pluginId>grpc-java</pluginId>
-          <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}</pluginArtifact>
+          <!--pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}</pluginArtifact -->
+          <protocExecutable>/usr/bin/protoc</protocExecutable>
+          <pluginExecutable>/usr/bin/protoc-gen-grpc-java</pluginExecutable>
           <skip>${skip.protoc}</skip>
         </configuration>
         <executions>
@@ -134,7 +136,7 @@
       </plugin>
 
       <!-- Proto lock for preventing backwards compatibility issues -->
-      <plugin>
+      <!-- plugin>
         <groupId>com.salesforce.servicelibs</groupId>
         <artifactId>proto-backwards-compatibility</artifactId>
         <configuration>
@@ -147,7 +149,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
+      </plugin -->
 
       <!-- Skip findbugs since there are only generated files in this module. -->
       <plugin>
